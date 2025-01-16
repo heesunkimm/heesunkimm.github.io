@@ -1,0 +1,156 @@
+    .m_hide {display: block;}
+    .m_show {display: none;}
+    #home, #profile, #portfolio, #contact {height: 100vh;}
+    header {position: fixed; width: 1440px; height: 65px; transition: all 0.3s ease; z-index: 100;}
+    header .header_wrap {width: 1300px; height: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;}
+    header.fixed {background: rgba(95, 95, 95, 0.4);}
+    header.fixed .logo_box a, header.fixed ul li a {color: #fff;}
+
+    header .logo_box {font-size: 30px;}
+    header ul {display: flex; align-items: center; gap: 20px; font-size: 28px;}
+    header ul li {position: relative; transition: all 0.3s ease;}
+    header ul li::after, 
+    header ul li:hover::after {content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); height: 10px; background: rgba(255, 255, 255, 0.5); transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease; z-index: -1;}
+    header ul li::after {width: 0; opacity: 0;}
+    header ul li:hover::after {width: 100%; opacity: 0.4;}
+
+    main .content {position: relative; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+    main .content h2 {position: absolute; top: 80px; font-size: 32px; text-align: center;}
+    main .content:nth-child(odd) {background-color: #6e80a8;}
+    main .content:nth-child(even) {background-color: #000;}
+    main .content:nth-child(even), main .content:nth-child(even) a {color: #fff;}
+    main .content .wrap {display: flex; align-content: center; justify-content: center; gap: 30px;}
+    main .content .wrap .txt_box > div:not(:nth-child(1)) .txt_tit {margin-top: 6px;}
+    main .content .wrap .txt_tit {font-size: 20px;}
+    main .content .wrap .img_box {filter: grayscale(100%); transition: filter 0.3s ease, 0.3s ease;}
+    main .content .wrap .img_box:hover {filter: grayscale(0);}
+    main .content:nth-child(even) .wrap .txt_box {color: #fff;}
+    main .content:nth-child(even) .wrap .txt_box .txt_tit {color: #6e80a8;}
+
+    main #home {overflow: hidden;}
+    main #home .txt {display: inline-block; white-space: nowrap; font-size: 56px; font-weight: bold;}
+    main #home .txt_box p + p {margin-top: 10px;}
+
+    main #profile .profile_tit {width: 100%; font-size: 22px; line-height: 28px; text-align: center;}
+    main #profile .wrap ul:not(:nth-child(1)) {margin-top: 10px; font-size: 16px;}
+    main #profile .wrap ul li + li {margin-top: 6px;}
+    main #profile .img_box {width: 300px; height: 379px;}
+
+    main #portfolio .wrap .portfolio_container {width: 1000px; margin: 0 auto;}
+    main #portfolio .wrap .portfolio_container ul {display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between;}
+    main #portfolio .wrap .portfolio_container ul li {width: 480px; height: auto;}
+    main #portfolio .wrap .portfolio_container ul li a {position: relative;}
+    main #portfolio .wrap .portfolio_container ul li .pt_tit {position: absolute; width: 100%; top: 5%; font-size: 22px; font-weight: 700; text-align: center; color: #000; text-shadow: 2px 2px 2px #ccc;}
+    main #portfolio .wrap .portfolio_container ul li .img_wrap {width: 480px; height: 300px; overflow: hidden;}
+    main #portfolio .wrap .portfolio_container ul li .img_wrap .img_box {width: 100%; height: 100%; background-repeat: no-repeat; background-position: center center; background-size: cover; filter: grayscale(100%); transition: all 1s;}
+    main #portfolio .wrap .portfolio_container ul li .img_wrap .img_box:hover {filter: grayscale(0); transform: scale(1.025);}
+    main #portfolio .wrap .portfolio_container ul li .txt_box:nth-child(2) {text-shadow: 1px 0px 2px #fefefe;}
+    main #portfolio .wrap .portfolio_container .portfolio_pagination {display: none;}
+    main #portfolio .wrap .portfolio_container ul li:nth-child(1) .img_wrap .img_box {background-image: url('../images/galaxy_s24_series.avif');}
+    main #portfolio .wrap .portfolio_container ul li:nth-child(2) .img_wrap .img_box {background-image: url('../images/galaxy_s23_fe.jpg.webp');}
+    main #portfolio .wrap .portfolio_container ul li:nth-child(3) .img_wrap .img_box {background-image: url('../images/jorygigi.webp');}
+    main #portfolio .wrap .portfolio_container ul li:nth-child(4) .img_wrap .img_box {background-image: url('../images/e_foodmall.jpg');}
+    main #portfolio .wrap .portfolio_container ul li .txt_box {margin-top: 6px; font-size: 16px; text-align: center;}
+
+    main #contact .wrap .txt_box p {font-size: 28px; text-align: center;}
+    main #contact .wrap .txt_box ul {margin-top: 60px; display: flex; align-items: center; justify-content: center; gap: 20px;}
+    main #contact .wrap .txt_box ul li {font-size: 23px;}
+    main #contact .wrap .txt_box ul li a {position: relative; font-size: 21px;}
+    main #contact .wrap .txt_box ul li a::before {content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 6px; background-color: #ccc; opacity: 0.4; z-index: -1;}
+    main #contact .wrap .txt_box ul li + li {margin-top: 6px;}
+
+    footer {position: relative; height: 26vh; background-color: #6e80a8;}
+    footer ul {position: absolute; top: 50%; transform: translateY(-50%); width: 100%; color: #333; text-align: center;}
+    footer ul li:nth-child(1) {font-size: 16px;}
+    footer ul li:nth-child(2) {margin-top: 6px; font-size: 14px;}
+
+    @media all and (min-width:769px) and (max-width:1440px) {
+        header {width: 100.0000vw; height: 4.5139vw;}
+        header .header_wrap {width: 90.2778vw;}
+
+        header .logo_box {font-size: 2.0833vw;}
+        header ul {gap: 1.3889vw; font-size: 1.9444vw;}
+
+        main .content h2 {top: 5.5556vw; font-size: 2.2222vw;}
+        main .content .wrap {gap: 2.0833vw;}
+        main .content .wrap .txt_box > div:not(:nth-child(1)) .txt_tit {margin-top: 0.4167vw;}
+        main .content .wrap .txt_tit {font-size: 1.3889vw;}
+        main #home .txt {font-size: 3.8889vw;}
+        main #home .txt_box p + p {margin-top: 0.6944vw;}
+
+        main #profile .profile_tit {font-size: 1.5278vw; line-height: 1.9444vw;}
+        main #profile .wrap ul:not(:nth-child(1)) {margin-top: 0.6944vw; font-size: 1.1111vw;}
+        main #profile .wrap ul li + li {margin-top: 0.4167vw;}
+        main #profile .img_box {width: 20.8333vw; height: 26.3194vw;}
+        
+        main #portfolio .wrap .portfolio_container {width: 69.4444vw;}
+        main #portfolio .wrap .portfolio_container ul {gap: 1.3889vw;}
+        main #portfolio .wrap .portfolio_container ul li {width: 33.3333vw; height: auto;}
+        main #portfolio .wrap .portfolio_container ul li .pt_tit {font-size: 1.5278vw; text-shadow: 0.1389vw 0.1389vw 0.1389vw #ccc;}
+        main #portfolio .wrap .portfolio_container ul li .img_wrap {width: 33.3333vw; height: 20.8333vw;}
+        main #portfolio .wrap .portfolio_container ul li .txt_box {margin-top: 0.4167vw; font-size: 1.1111vw;}
+
+        main #contact .wrap .txt_box p {font-size: 1.9444vw;}
+        main #contact .wrap .txt_box ul {margin-top: 4.1667vw; gap: 1.3889vw;}
+        main #contact .wrap .txt_box ul li {font-size: 1.5972vw;}
+        main #contact .wrap .txt_box ul li a {font-size: 1.4583vw;}
+        main #contact .wrap .txt_box ul li a::before {height: 0.4167vw;}
+        main #contact .wrap .txt_box ul li + li {margin-top: 0.4167vw;}
+
+        footer ul li:nth-child(1) {font-size: 1.1111vw;}
+        footer ul li:nth-child(2) {margin-top: 0.4167vw; font-size: 0.9722vw;}
+    }
+    @media all and (max-width:768px){
+        .m_hide, .dimm {display: none;}
+        .m_show, .dimm.active {display: block;}
+        #home, #portfolio, #contact {height: 100vh;}
+        #profile {height: auto; padding: 26.0417vw 0 13.0208vw;}
+
+        header {width: 100.0000vw; height: 13.0208vw;}
+        header .header_wrap {width: 93.7500vw;}
+        header.fixed ul li a {color: #000;}
+
+        header .logo_box {font-size: 6.7708vw;}
+        header .menubar_box {position: relative; width: 10.4167vw;}
+        header.fixed .menubar_box img {filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(71deg) brightness(106%) contrast(103%);}
+        header .nav_box {position: absolute; top: 0; right: 0; width: 0; height: 100vh; background-color: #fff; transition: width 0.3s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s ease-in-out; transform: translateX(100%); opacity: 0; z-index: 200;}
+        header .nav_box.active {width: 60%; transform: translateX(0); opacity: 1;}
+        header ul {position: absolute; top: 10%; left: 50%; transform: translateX(-50%); width: 100%; height: 100%; background-color: #fff; display: flex; flex-direction: column; align-items: center; gap: 5.2083vw; font-size: 6.2500vw;}
+        header ul li::after, 
+        header ul li:hover::after {height: 2.3438vw; background: rgba(109, 128, 168, 0.5);}
+
+        main .content h2 {top: 13.0208vw; font-size: 6.5104vw;}
+        main .content .wrap {gap: 3.9063vw;}
+        main .content .wrap .txt_box > div:not(:nth-child(1)) .txt_tit {margin-top: 1.3021vw;}
+        main .content .wrap .txt_tit {font-size: 3.3854vw;}
+
+        main #home .txt {font-size: 7.2917vw;}
+        main #home .txt_box p + p {margin-top: 1.3021vw;}
+
+        main #profile .profile_tit {font-size: 3.1250vw; line-height: 4.1667vw; letter-spacing: -0.025em;}
+        main #profile .wrap .txt_box {width: 93.7500vw;}
+        main #profile .wrap ul:not(:nth-child(1)) {margin-top: 1.3021vw; font-size: 3.1250vw; letter-spacing: -0.025em;}
+        main #profile .wrap ul li + li {margin-top: 0.7813vw;}
+        main #profile .img_box {width: 46.8750vw; height: auto;}
+
+        main #portfolio .wrap .portfolio_container {width: 93.7500vw; overflow: hidden;}
+        main #portfolio .wrap .portfolio_container ul {flex-wrap: nowrap; align-items: center; gap: 0;}
+        main #portfolio .wrap .portfolio_container ul li {width: 93.7500vw;}
+        main #portfolio .wrap .portfolio_container ul li .pt_tit {font-size: 4.4271vw; text-shadow: 0.2604vw 0.2604vw 0.2604vw #ccc;}
+        main #portfolio .wrap .portfolio_container ul li .img_wrap {width: 93.7500vw; height: 61.1979vw;}
+        main #portfolio .wrap .portfolio_container ul li .txt_box:nth-child(2) {text-shadow: 0.1302vw 0.0000vw 0.2604vw #fefefe;}
+        main #portfolio .wrap .portfolio_container .portfolio_pagination {display: block; bottom: -7%;}
+        main #portfolio .wrap .portfolio_container .portfolio_pagination .swiper-pagination-bullet {width: 2.6042vw; height: 2.6042vw; background-color: rgba(255, 255, 255, 0.5);}
+        main #portfolio .wrap .portfolio_container .portfolio_pagination .swiper-pagination-bullet-active {background-color: #414b62;}
+        main #portfolio .wrap .portfolio_container ul li .txt_box {margin-top: 1.3021vw; font-size: 3.9063vw;}
+
+        main #contact .wrap .txt_box p {font-size: 4.9479vw;}
+        main #contact .wrap .txt_box ul {margin-top: 7.8125vw; flex-direction: column; gap: 3.1250vw; }
+        main #contact .wrap .txt_box ul li {font-size: 4.4271vw;}
+        main #contact .wrap .txt_box ul li a {font-size: 4.1667vw;}
+        main #contact .wrap .txt_box ul li a::before {height: 1.5625vw;}
+        main #contact .wrap .txt_box ul li + li {margin-top: 0.7813vw;}
+
+        footer ul li:nth-child(1) {font-size: 3.6458vw;}
+        footer ul li:nth-child(2) {margin-top: 0.7813vw; font-size: 3.3854vw;}
+    }
