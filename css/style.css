@@ -1,6 +1,7 @@
     .m_hide {display: block;}
     .m_show {display: none;}
-    #home, #profile, #portfolio, #contact {height: 100vh;}
+    #home, #profile, #contact {height: 100vh;}
+    #portfolio {height: auto; padding: 180px 0 100px;}
     header {position: fixed; width: 1440px; height: 65px; transition: all 0.3s ease; z-index: 100;}
     header .header_wrap {width: 1300px; height: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;}
     header.fixed {background: rgba(95, 95, 95, 0.4);}
@@ -65,6 +66,7 @@
     footer ul li:nth-child(2) {margin-top: 6px; font-size: 14px;}
 
     @media all and (min-width:769px) and (max-width:1440px) {
+        #portfolio {padding: 12.5000vw 0 6.9444vw;}
         header {width: 100.0000vw; height: 4.5139vw;}
         header .header_wrap {width: 90.2778vw;}
 
